@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1762394422989
+Build-Jdk-Spec: 17
+Bundle-Activator: com.example.client.Activator
+Bundle-Description: calculator-client OSGi bundle project.
+Bundle-ManifestVersion: 2
+Bundle-Name: calculator-client Bundle
+Bundle-SymbolicName: calculator-client
+Bundle-Version: 1.0.0
+Created-By: Apache Maven Bundle Plugin 5.1.8
+Export-Package: com.example.client;version="1.0.0";uses:="org.osgi.frame
+ work"
+Import-Package: com.example.calculator;version="[1.0,2)",com.example.cli
+ ent;version="[1.0,2)",java.io,java.lang,org.osgi.framework;version="[1.
+ 10,2)"
+Require-Capability: osgi.service;filter:="(objectClass=com.example.calcu
+ lator.CalculatorService)";effective:=active,osgi.extender;filter:="(&(o
+ sgi.extender=osgi.component)(version>=1.4.0)(!(version>=2.0.0)))",osgi.
+ ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/com.example.client.CalculatorClient.xml
+Tool: Bnd-6.3.1.202206071316
